@@ -4,13 +4,30 @@ import Nursery from "../models/Nursery.js";
 export const getNearbyNurseries = async (req, res) => {
   try {
     const { lat, lng, radius = 10 } = req.query;
-    if (!lat || !lng) return res.status(400).json({ message: "lat & lng required" });
+    const latitude = Number.parseFloat(lat);
+    const longitude = Number.parseFloat(lng);
+    const distance = Number.parseFloat(radius);
+
+    if (
+      !Number.isFinite(latitude) ||
+      !Number.isFinite(longitude) ||
+      latitude < -90 ||
+      latitude > 90 ||
+      longitude < -180 ||
+      longitude > 180
+    ) {
+      return res.status(400).json({ message: "Valid lat & lng required" });
+    }
+
+    if (!Number.isFinite(distance) || distance <= 0) {
+      return res.status(400).json({ message: "radius must be a positive number" });
+    }
 
     const nurseries = await Nursery.find({
       location: {
         $near: {
-          $geometry: { type: "Point", coordinates: [parseFloat(lng), parseFloat(lat)] },
-          $maxDistance: parseFloat(radius) * 1000,
+          $geometry: { type: "Point", coordinates: [longitude, latitude] },
+          $maxDistance: distance * 1000,
         },
       },
     }).limit(50);

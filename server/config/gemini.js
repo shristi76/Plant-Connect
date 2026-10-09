@@ -1,12 +1,18 @@
 import { GoogleGenerativeAI } from "@google/generative-ai";
+import dotenv from "dotenv";
+
+// This module is evaluated before server.js runs its startup code.
+// Load the environment here so the API key is available during initialization.
+dotenv.config();
 
 const API_KEY = process.env.GEMINI_API_KEY;
 const genAI = API_KEY ? new GoogleGenerativeAI(API_KEY) : null;
+const MODEL_NAME = process.env.GEMINI_MODEL || "gemini-2.5-flash";
 
 // ✅ Use a stable model with higher free-tier limits
 export const geminiModel = genAI
   ? genAI.getGenerativeModel({
-      model: "gemini-2.5-flash",
+      model: MODEL_NAME,
       systemInstruction: `You are PlantConnect AI - an expert Indian horticulturist.
 Give practical, region-specific advice for Indian climate.
 Always structure: 🌱 Best Plants | 💧 Care | 🧪 Fertilizer | 🌍 Pollution Benefit.

@@ -14,8 +14,13 @@ export default function NurseryFinder() {
     setLoading(true);
     try {
       const { data } = await api.get(`/nurseries/nearby?lat=${lat}&lng=${lng}&radius=${radius}`);
-      setNurseries(data);
-      if (!data.length) toast("No nurseries nearby. Showing all.");
+      if (data.length) {
+        setNurseries(data);
+      } else {
+        const { data: allNurseries } = await api.get("/nurseries");
+        setNurseries(allNurseries);
+        toast("No nurseries nearby. Showing all nurseries.");
+      }
     } catch {
       const { data } = await api.get("/nurseries");
       setNurseries(data);
