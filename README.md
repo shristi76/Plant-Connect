@@ -1,4 +1,4 @@
-# Plant Connect- Plant Helps to purify air 🌱
+# Plant Connect- Plant Helps to purify air 
 
 > **Don't just buy a plant. Share one, grow one, and make your community greener and purify air.**
 
@@ -17,15 +17,15 @@ Plant Connect turns plant-growing into a local community experience:
 
 ## Core Features
 
-### 🌳 Find Nearby Nurseries
+###  Find Nearby Nurseries
 
 The nursery finder uses browser geolocation and MongoDB geospatial queries to show plant shops near the user. Users can adjust the search radius and view nursery addresses, phone numbers, ratings, and available plants with prices.
 
-### 💚 Neighbour Donations
+###  Neighbour Donations
 
 Users can post free plants, saplings, seeds, and cuttings with a description, quantity, city, and pickup information. Nearby users can browse available donations and claim an item, helping healthy plant material find a new home instead of going to waste.
 
-### 🤖 AI Plant Doctor
+###  AI Plant Doctor
 
 The protected AI chat experience uses Google Gemini to answer plant-care questions. It can provide:
 
@@ -36,7 +36,7 @@ The protected AI chat experience uses Google Gemini to answer plant-care questio
 
 The assistant also supports multiple chats, regeneration, and city-specific prompts.
 
-### 🔐 Accounts and Location-Aware Experiences
+###  Accounts and Location-Aware Experiences
 
 Users can register and log in with JWT authentication. Location data is used to improve nearby nursery and donation results, while protected actions such as posting, claiming, and using the AI assistant require authentication.
 
@@ -88,6 +88,21 @@ Project/
 │   └── seed.js             # Demo users, nurseries, and donations
 └── README.md
 ```
+
+## DEMO
+
+<img width="1917" height="897" alt="Screenshot 2026-10-09 155928" src="https://github.com/user-attachments/assets/1927eb16-ff3c-4e59-af3e-4a1a36347dec" />
+
+---
+
+<img width="950" height="746" alt="Screenshot 2026-10-09 152008" src="https://github.com/user-attachments/assets/b75750e8-3aae-4100-9cbf-d187cd21a1fc" />
+
+
+---
+
+<img width="1917" height="902" alt="Screenshot 2026-10-09 151648" src="https://github.com/user-attachments/assets/f367f36d-8932-4d0b-ad3d-97bf8baff892" />
+
+---
 
 ## Getting Started
 
