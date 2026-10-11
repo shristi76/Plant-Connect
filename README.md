@@ -185,17 +185,6 @@ The backend is mounted under `/api`:
 | AI | `POST /api/ai/chat` | Ask the Plant Doctor (authenticated) |
 | AI | `POST /api/ai/recommend` | Get AI plant recommendations (authenticated) |
 
-## Hackathon Impact
-
-Plant Connect addresses a practical sustainability challenge with a lightweight, community-first approach:
-
-- **Accessible:** makes it easier for beginners to start gardening.
-- **Affordable:** encourages sharing instead of requiring every plant to be purchased.
-- **Local:** connects neighbours and nearby nurseries using location-aware discovery.
-- **Educational:** gives users actionable care guidance at the moment they need it.
-- **Scalable:** the same community model can expand city by city.
-
-The goal is not only to help someone buy a plant. It is to help more people start growing, keep their plants healthy, and share the next generation with their community.
 
 ## Future Improvements
 
@@ -206,6 +195,6 @@ The goal is not only to help someone buy a plant. It is to help more people star
 - Better map visualization and directions
 - Community challenges and impact metrics, such as plants shared and households reached
 
-## Team Presentation
+## Thank You :)
 
 **Plant Connect: Share one, grow one, and make your community greener.**
