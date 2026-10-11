@@ -1,6 +1,6 @@
-# Plant Connect 🌱
+# Plant Connect- Plant Helps to purify air 🌱
 
-> **Don't just buy a plant. Share one, grow one, and make your community greener.**
+> **Don't just buy a plant. Share one, grow one, and make your community greener and purify air.**
 
 Plant Connect is a community-driven platform for discovering plants locally, sharing plants with neighbours, and learning how to care for them with AI-powered guidance.
 
